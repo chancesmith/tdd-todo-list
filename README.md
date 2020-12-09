@@ -28,9 +28,12 @@ Clone/Fork and finish the logic writing your tests first.
 - [ ] get all todos
 - [ ] get all complete todos
 - [ ] get all inComplete todos
+- [ ] in the todo list, inComplete todos are above complete todos
 - [ ] add todo to list
 - [ ] new todo item is added to top of the list
 
 **App.ts**
 
-- [ ] show a list of todos
+- [ ] show a list of all todos
+- [ ] mark todo done
+- [ ] add todo item
