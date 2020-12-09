@@ -1,6 +1,6 @@
 # TDD ToDo workflow
 
-Write your logic first with TDD.
+Write the tests that will use your app. Write your logic first with TDD. Do the UI later.
 
 Currently, there is a failing test in Todo.test.ts for you to start by writing production code. 
 
