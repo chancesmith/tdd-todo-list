@@ -4,7 +4,7 @@ Write the tests that will use your app. Write your logic first with TDD. Do the 
 
 Currently, there is a failing test in Todo.test.ts for you to start by writing production code. 
 
-*Hint: We need a class in `Todo.ts` made and imported into `Todo.test.ts`.*
+*Hint: We need a class in `./src/api/Todo.ts` made and imported into `./src/api/Todo.test.ts`.*
 
 ## Next up
 
