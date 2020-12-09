@@ -1,6 +1,6 @@
 # TDD ToDo workflow
 
-Write your logic first before creating your UI.
+Write your logic first with TDD.
 
 Currently, there is a failing test in Todo.test.ts for you to start by writing production code. 
 
