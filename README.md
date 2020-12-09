@@ -1,5 +1,7 @@
 # TDD ToDo workflow
 
+Write your logic first before creating your UI.
+
 Currently, there is a failing test in Todo.test.ts for you to start by writing production code. 
 
 *Hint: We need a class in `Todo.ts` made and imported into `Todo.test.ts`.*
