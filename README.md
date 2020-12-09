@@ -30,3 +30,7 @@ Clone/Fork and finish the logic writing your tests first.
 - [ ] get all inComplete todos
 - [ ] add todo to list
 - [ ] new todo item is added to top of the list
+
+**App.ts**
+
+- [ ] show a list of todos
