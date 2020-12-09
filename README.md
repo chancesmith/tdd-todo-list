@@ -6,15 +6,15 @@ Clone/Fork and finish the logic writing your tests first.
 
 ## Next up
 
-- TodoState
+**TodoState**
 - [x] can be done
 - [x] can be incomplete
-- Todo
+**Todo**
 - [ ] takes init state (string)
 - [ ] throw error if not a valid todo string
 - [ ] init state is inComplete
 - [ ] can mark complete
-- TodoList
+**TodoList**
 - [ ] takes init of todo items
 - [ ] get all todos
 - [ ] get all complete todos
