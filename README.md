@@ -1,4 +1,4 @@
-# TDD Todo workflow
+# TDD Todo workflow kata (~1 hour)
 
 Write the tests that will use your app. Write your logic first with TDD. Do the UI later.
 
