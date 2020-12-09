@@ -4,9 +4,9 @@ Currently, there is a failing test in Todo.test.ts for you to start by writing p
 
 *Hint: We need a class in `Todo.ts` made and imported into `Todo.test.ts`.*
 
-Clone/Fork and finish the logic writing your tests first.
-
 ## Next up
+
+Clone/Fork and finish the logic writing your tests first.
 
 **TodoState**
 
