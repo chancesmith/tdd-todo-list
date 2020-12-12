@@ -25,10 +25,12 @@ Clone/Fork and finish the logic writing your tests first.
 
 **TodoList**
 
-- [ ] takes init of todo items
-- [ ] get all todos
+- [x] takes init empty todo list
+- [x] takes init of todo items
+- [x] get all todos
 - [ ] get all complete todos
 - [ ] get all inComplete todos
+- [ ] in the todo list, inComplete todos are above complete todos
 - [ ] add todo to list
 - [ ] new todo item is added to top of the list
 
