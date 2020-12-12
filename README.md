@@ -37,11 +37,5 @@ Clone/Fork and finish the logic writing your tests first.
 
 **App.ts**
 
-<<<<<<< HEAD
 - [ ] show a list of todos
 - [ ] add item to list
-=======
-- [ ] show a list of all todos
-- [ ] mark todo done
-- [ ] add todo item
->>>>>>> 730cffc5082654b93e617c7fd849f4269b9632a0
