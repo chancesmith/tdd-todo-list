@@ -2,7 +2,7 @@
 
 Write the tests that will use your app. Write your logic first with TDD. Do the UI later.
 
-Currently, there is a failing test in Todo.test.ts for you to start by writing production code. 
+Currently, there is a failing test in Todo.test.ts for you to start by writing production code.
 
 *Hint: We need a class in `Todo.ts` made and imported into `Todo.test.ts`.*
 
@@ -17,10 +17,11 @@ Clone/Fork and finish the logic writing your tests first.
 
 **Todo**
 
-- [ ] takes init state (string)
-- [ ] throw error if not a valid todo string
-- [ ] init state is inComplete
-- [ ] can mark complete
+- [x] takes init state (string)
+- [x] throw error if not a valid todo string
+- [x] init state is inComplete
+- [x] can mark complete
+- [x] can mark uncomplete
 
 **TodoList**
 

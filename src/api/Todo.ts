@@ -1,7 +1,16 @@
-// Here is an example starting point. Uncomment or roll your own.
+import TodoState from "./TodoState";
 
-// import TodoState from "./TodoState";
+export default class Todo {
+  title: string;
+  isComplete: boolean;
 
-// export default class Todo {
-//   constructor() {}
-// }
+  constructor(state: string) {
+    if  (!state) throw new Error("Not a valid todo.");
+    this.title = state;
+    this.isComplete = !!TodoState.UNDONE;
+  }
+
+  toggleComplete () {
+    this.isComplete = !this.isComplete;
+  }
+}
