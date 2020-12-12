@@ -5,12 +5,13 @@ export default class Todo {
   isComplete: boolean;
 
   constructor(state: string) {
-    if  (!state) throw new Error("Not a valid todo.");
+    if (!state) throw new Error("Not a valid todo.");
     this.title = state;
     this.isComplete = !!TodoState.UNDONE;
   }
 
-  toggleComplete () {
+  toggleComplete() {
     this.isComplete = !this.isComplete;
+    return this.isComplete;
   }
 }

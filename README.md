@@ -28,11 +28,11 @@ Clone/Fork and finish the logic writing your tests first.
 - [x] takes init empty todo list
 - [x] takes init of todo items
 - [x] get all todos
-- [ ] get all complete todos
-- [ ] get all inComplete todos
-- [ ] in the todo list, inComplete todos are above complete todos
-- [ ] add todo to list
-- [ ] new todo item is added to top of the list
+- [x] get all complete todos
+- [x] get all inComplete todos
+- [x] add todo to list
+- [x] new todo item is added to top of the list
+- [x] in the todo list, inComplete todos are above complete todos
 
 **App.ts**
 
