@@ -22,15 +22,10 @@ function App() {
     <div>
       <form onSubmit={handleSubmit}>
         <input
-
              id="task"
-
-                 placeholder="add a todo"
-
-               value={text}
-
+             placeholder="add a todo"
+             value={text}
              onChange={handleChange}
-
         />
       </form>
       <ul>
