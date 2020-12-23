@@ -13,7 +13,7 @@ describe("Todo", () => {
 
   test("Should throw error if not initialized with a valid title", () => {
     expect(() => {
-      // @ts-ignore
+      // @ts-expect-error: breaks if not valid args
       new Todo(undefined);
     }).toThrow();
   });
