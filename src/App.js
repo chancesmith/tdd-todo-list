@@ -1,40 +1,27 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import Todo from "./api/Todo";
 import TodoList from "./api/TodoList";
 
+// 👋 imagine this list is a prop, context or JSON api
+const list = new TodoList([]);
+
 function App() {
-  const todos = [new Todo("get milk"), new Todo("get bread")];
-  const [list] = useState(new TodoList(todos));
-  const [text, setText] = useState("");
+  const [todos, setTodos] = useState(list.todos);
 
-  const handleChange = (e) => {
-    setText(e.target.value);
-  };
+  function handleNewTodo(txt) {
+    list.addTodo(txt);
+    setTodos(list.todos);
+  }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    list.addTodo(text)
-    setText('');
-    console.log(list.todos);
-  };
+  function handleClick(txt) {
+    handleNewTodo(`add things ${list.todos.length}`);
+  }
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input
-
-             id="task"
-
-                 placeholder="add a todo"
-
-               value={text}
-
-             onChange={handleChange}
-
-        />
-      </form>
+      <button onClick={handleClick}>add todo</button>
       <ul>
-        {list.todos.map((todo) => (
+        {todos.map((todo) => (
           <li>{todo.title}</li>
         ))}
       </ul>
