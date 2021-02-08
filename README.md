@@ -37,5 +37,6 @@ Clone/Fork and finish the logic writing your tests first.
 
 **App.ts**
 
+- [ ] show an empty list of todos
 - [ ] show a list of todos
 - [ ] add item to list
