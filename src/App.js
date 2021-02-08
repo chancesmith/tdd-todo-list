@@ -1,32 +1,9 @@
-import React, { useState, useEffect } from "react";
-import Todo from "./api/Todo";
 import TodoList from "./api/TodoList";
+import {Todos} from './Todos'
 
-// 👋 imagine this list is a prop, context or JSON api
 const list = new TodoList([]);
 
-function App() {
-  const [todos, setTodos] = useState(list.todos);
-
-  function handleNewTodo(txt) {
-    list.addTodo(txt);
-    setTodos(list.todos);
-  }
-
-  function handleClick(txt) {
-    handleNewTodo(`add things ${list.todos.length}`);
-  }
-
-  return (
-    <div>
-      <button onClick={handleClick}>add todo</button>
-      <ul>
-        {todos.map((todo) => (
-          <li>{todo.title}</li>
-        ))}
-      </ul>
-    </div>
-  );
+// 👋 imagine this list prop to be context or JSON api. It's up to you how you use the class.
+export default function App() {
+  return <Todos list={list}/>
 }
-
-export default App;
