@@ -1,5 +1,4 @@
-import React from "react";
-import { render, waitFor, screen } from "@testing-library/react";
+import { render, waitFor, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import { Todos } from "./Todos";
 import TodoList from "./api/TodoList";
@@ -17,4 +16,16 @@ test("should get list of todos", async () => {
 
   await waitFor(() => screen.getByText("first todo"));
   expect(getByText("first todo")).toBeInTheDocument()
+});
+
+
+test("should add item to list", async () => {
+  const {getByText} = render(<Todos list={new TodoList([])} />);
+
+  // add item to todo list
+  const addTodoButton = screen.getByText('add todo')
+  fireEvent.click(addTodoButton)
+
+  await waitFor(() => screen.getByText("add things 0"));
+  expect(getByText("add things 0")).toBeInTheDocument()
 });
