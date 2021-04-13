@@ -26,17 +26,17 @@ Clone/Fork and finish the logic writing your tests first.
 **TodoList**
 
 - [ ] takes init empty todo list
-- [ ] takes init of todo items
+- [ ] takes init of todo items (array of Todo instances)
 - [ ] get all todos
 - [ ] get all complete todos
 - [ ] get all inComplete todos
 - [ ] in the todo list, inComplete todos are above complete todos
 - [ ] add todo to list
 - [ ] new todo item is added to top of the list
-- [ ] in the todo list, inComplete todos are above complete todos
 
 **App.ts**
 
+- [ ] show an empty list of todos
 - [ ] show a list of todos
 - [ ] add item to list
 - [ ] mark todo complete
