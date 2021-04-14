@@ -38,7 +38,7 @@ export function Todos({ list }) {
           {todos.map((todo, index) => (
             <li key={todo.title} label="todo">
               <input type="checkbox" defaultChecked={todo.isComplete} onClick={(event)=>handleTodoComplete(event,index)} aria-label={`${todo.title} - checkbox${todo.isComplete ? '(done)' : ''}`} />{" "}
-              {todo.title} {todo.isComplete ? '(done)' : ''}
+              {todo.title}
             </li>
           ))}
         </ul>
