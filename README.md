@@ -38,5 +38,5 @@ Clone/Fork and finish the logic writing your tests first.
 
 - [x] show a list of todos
 - [x] add item to list
-- [ ] mark todo complete
-- [ ] show completed tasks
+- [x] mark todo complete
+- [x] show completed tasks
