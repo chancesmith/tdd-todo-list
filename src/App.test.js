@@ -2,6 +2,7 @@ import { render, waitFor, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import { Todos } from "./Todos";
 import TodoList from "./api/TodoList";
+import Todo from "./api/Todo"
 
 test("should get empty list of todos", async () => {
   const {getByText} = render(<Todos list={new TodoList([])} />);
@@ -67,3 +68,38 @@ test('should empty input field on submit', async () => {
    await waitFor(() => screen.getByText(todoText));
    expect(input.value).toBe('');
 });
+
+test('should have checkbox on todo', async () => {
+  const {getByLabelText} = render(<Todos list={new TodoList([new Todo("get milk")])} />);
+
+  await waitFor(() => screen.getByLabelText("get milk - checkbox"));
+  const todoCheckbox = getByLabelText("get milk - checkbox")
+
+  expect(todoCheckbox).toBeInTheDocument()
+  // expect(checkbox).not.toBeChecked()
+});
+
+test('should not be checked on new todo', async () => {
+  const {getByLabelText} = render(<Todos list={new TodoList([new Todo("get milk")])} />);
+
+  await waitFor(() => screen.getByLabelText("get milk - checkbox"));
+  const todoCheckbox = getByLabelText("get milk - checkbox")
+
+   expect(todoCheckbox).not.toBeChecked()
+})
+
+test('should mark todo done when checkbox clicked', async () => {
+    const {getByLabelText} = render(<Todos list={new TodoList([new Todo("get milk")])} />);
+
+  await waitFor(() => screen.getByLabelText("get milk - checkbox"));
+  const todoCheckbox = getByLabelText("get milk - checkbox")
+
+  // mark todo done
+  fireEvent.click(todoCheckbox);
+
+  await waitFor(() => screen.getByLabelText("get milk - checkbox(done)"));
+  const doneTodoCheckbox = getByLabelText("get milk - checkbox(done)");
+
+  expect(doneTodoCheckbox).toBeInTheDocument();
+  expect(doneTodoCheckbox).toBeChecked();
+})

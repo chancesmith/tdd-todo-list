@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export function Todos({list}) {
+export function Todos({ list }) {
   const [todos, setTodos] = useState(list.todos);
 
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
 
   function handleNewTodo(txt) {
     list.addTodo(txt);
@@ -13,7 +13,7 @@ export function Todos({list}) {
   function handleAddTodoSubmit() {
     if (inputValue.length !== 0) {
       handleNewTodo(inputValue);
-      setInputValue('');
+      setInputValue("");
     }
   }
 
@@ -21,20 +21,30 @@ export function Todos({list}) {
     setInputValue(event.target.value);
   }
 
+  function handleTodoComplete(event, todoIndex) {
+    list.todos[todoIndex].isComplete = event.target.checked;
+    setTodos([...list.todos]);
+  }
+
   return (
     <div>
       <label>
         <span>Add Todo</span>
-        <input type="text" value={inputValue} onChange={handleInput}/>
+        <input type="text" value={inputValue} onChange={handleInput} />
       </label>
       <button onClick={handleAddTodoSubmit}>add todo</button>
       {todos.length ? (
         <ul>
-          {todos.map((todo) => (
-            <li key={todo.title} label="todo">{todo.title}</li>
+          {todos.map((todo, index) => (
+            <li key={todo.title} label="todo">
+              <input type="checkbox" defaultChecked={todo.isComplete} onClick={(event)=>handleTodoComplete(event,index)} aria-label={`${todo.title} - checkbox${todo.isComplete ? '(done)' : ''}`} />{" "}
+              {todo.title} {todo.isComplete ? '(done)' : ''}
+            </li>
           ))}
         </ul>
-      ) : <p>no todos</p>}
+      ) : (
+        <p>no todos</p>
+      )}
     </div>
   );
 }
